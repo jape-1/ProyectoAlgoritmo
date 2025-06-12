@@ -57,7 +57,7 @@ public class cProducto {
 
     @Override
     public String toString() {
-        return "cProducto{" + "codpro=" + codpro + ", nombre=" + nombre + ", unipre=" + unipre + ", cantcomp=" + cantcomp + '}';
+        return "cProducto{" + "codpro=" + codpro + ", nombre=" + nombre + ", unipre=" + unipre + ", CANTIDADCOMPRADA" + cantcomp + '}';
     }
     
     
