@@ -53,21 +53,25 @@ public class VIEW extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("CODIGO:");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(57, 81, 80, 16);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("PRODUCTO:");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(57, 121, 80, 16);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("PRECIO:");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(57, 162, 80, 16);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("CANTIDAD:");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(57, 205, 80, 16);
@@ -79,20 +83,20 @@ public class VIEW extends javax.swing.JFrame {
             }
         });
         jPanel1.add(txtcodigo);
-        txtcodigo.setBounds(183, 78, 110, 22);
+        txtcodigo.setBounds(183, 78, 110, 28);
 
         txtprecio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jPanel1.add(txtprecio);
-        txtprecio.setBounds(183, 159, 110, 22);
+        txtprecio.setBounds(183, 159, 110, 28);
 
         txtcant.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jPanel1.add(txtcant);
-        txtcant.setBounds(183, 202, 110, 22);
+        txtcant.setBounds(183, 202, 110, 28);
 
         cbxproducto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         cbxproducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE" }));
         jPanel1.add(cbxproducto);
-        cbxproducto.setBounds(183, 118, 110, 22);
+        cbxproducto.setBounds(183, 118, 110, 26);
 
         btnInsertar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnInsertar.setText("INSERTAR");
@@ -102,17 +106,17 @@ public class VIEW extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnInsertar);
-        btnInsertar.setBounds(370, 120, 130, 23);
+        btnInsertar.setBounds(370, 120, 130, 28);
 
         btnEliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnEliminar.setText("ELIMINAR");
         jPanel1.add(btnEliminar);
-        btnEliminar.setBounds(370, 160, 130, 23);
+        btnEliminar.setBounds(370, 160, 130, 28);
 
         btnup.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnup.setText("ACTUALIZAR");
         jPanel1.add(btnup);
-        btnup.setBounds(370, 200, 130, 23);
+        btnup.setBounds(370, 200, 130, 28);
 
         btnBuscar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnBuscar.setText("BUSCAR");
@@ -122,7 +126,7 @@ public class VIEW extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnBuscar);
-        btnBuscar.setBounds(370, 80, 130, 23);
+        btnBuscar.setBounds(370, 80, 130, 28);
 
         jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
