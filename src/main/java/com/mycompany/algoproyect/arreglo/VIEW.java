@@ -36,19 +36,20 @@ public class VIEW extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("QUE METODO QUIERES USAR?");
 
         jButton1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("LISTAS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("ARREGLOS");
 
         jButton3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("PILAS");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,11 +58,9 @@ public class VIEW extends javax.swing.JFrame {
         });
 
         jButton4.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("COLAS");
 
         jButton5.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
         jButton5.setText("ARBOLES");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +116,11 @@ public class VIEW extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        VIEWLISTAS vListas = new VIEWLISTAS();
+        vListas.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
