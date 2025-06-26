@@ -13,6 +13,8 @@ import com.mycompany.algoproyect.arreglo.Arreglos.cProducto;
 public class LES {
     private cNodo inicio, p, nuevo;
     
+    
+    
      public void insertaNodoxFinal(cProducto prod){
         nuevo = new cNodo();
         nuevo.setDato(prod);
@@ -26,6 +28,8 @@ public class LES {
             p.setSgte(nuevo);
         }
     }
+     
+     //sin boolean
      public boolean eliminaNodoxFinal(int codigo){
         if (inicio == null) return false;
         if (inicio.getDato().getCodpro() == codigo) {
@@ -43,6 +47,8 @@ public class LES {
         }
         return false;
     }
+     
+     
      public cProducto buscarProducto(int codigo) {
         p = inicio;
         while (p != null) {

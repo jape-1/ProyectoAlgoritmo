@@ -16,6 +16,12 @@ public class cTienda {
     private cProducto[] arreglo_productos;
     private int indMax;
     private int ultInd;
+    
+    public cTienda(int n){
+        arreglo_productos =  new cProducto[n];
+        indMax = arreglo_productos.length-1;
+        ultInd = -1;
+    }
 
     public cProducto[] getArreglo_productos() {
         return arreglo_productos;
@@ -24,6 +30,7 @@ public class cTienda {
     public void setArreglo_productos(cProducto[] arreglo_productos) {
         this.arreglo_productos = arreglo_productos;
     }
+    
 
     public int getIndMax() {
         return indMax;
@@ -41,12 +48,6 @@ public class cTienda {
         this.ultInd = ultInd;
     }
     
-    
-    public cTienda(int n){
-        arreglo_productos =  new cProducto[n];
-        indMax = arreglo_productos.length-1;
-        ultInd = -1;
-    }
 
 //    public void agregar(cProducto producto){
 //        for (int i = 0; i <= indMax; i++) {
@@ -70,6 +71,7 @@ public class cTienda {
         return msg;
     }
     
+    //La salida tiene ser logica
     public cProducto buscarxCod(int codigo){
         for(int i = 0; i <= ultInd; i++){
             if(arreglo_productos[i] != null && arreglo_productos[i].getCodpro() == codigo){
