@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.algoproyect.arreglo;
+package com.mycompany.algoproyect.arreglo.LES;
+
+import com.mycompany.algoproyect.arreglo.Arreglos.cProducto;
 
 /**
  *

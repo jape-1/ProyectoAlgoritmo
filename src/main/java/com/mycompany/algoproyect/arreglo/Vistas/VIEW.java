@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.algoproyect.arreglo;
+package com.mycompany.algoproyect.arreglo.Vistas;
 
 /**
  *
@@ -48,6 +48,11 @@ public class VIEW extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jButton2.setText("ARREGLOS");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jButton3.setText("PILAS");
@@ -121,6 +126,11 @@ public class VIEW extends javax.swing.JFrame {
         VIEWLISTAS vListas = new VIEWLISTAS();
         vListas.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        VIEWARREGLO arreglo = new VIEWARREGLO();
+        arreglo.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

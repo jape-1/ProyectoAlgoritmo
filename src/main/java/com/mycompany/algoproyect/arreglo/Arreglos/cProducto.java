@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.algoproyect.arreglo;
+package com.mycompany.algoproyect.arreglo.Arreglos;
 
 /**
  *
@@ -57,7 +57,7 @@ public class cProducto {
 
     @Override
     public String toString() {
-        return "cProducto{" + "codpro=" + codpro + ", nombre=" + nombre + ", unipre=" + unipre + ", CANTIDADCOMPRADA" + cantcomp + '}';
+        return "cProducto{" + "codpro=" + codpro + ", nombre=" + nombre + ", unipre=" + unipre + ", CANTIDADCOMPRADA: " + cantcomp ;
     }
     
     

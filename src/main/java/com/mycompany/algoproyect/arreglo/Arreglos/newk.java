@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.algoproyect.arreglo;
+package com.mycompany.algoproyect.arreglo.Arreglos;
 
+import com.mycompany.algoproyect.arreglo.Arreglos.cTienda;
+import com.mycompany.algoproyect.arreglo.Arreglos.cProducto;
 import java.util.Arrays;
 
 /**
@@ -34,7 +36,7 @@ public class newk {
         
         System.out.println(b.mostrar());
         System.out.println(b.buscarxCod(4));
-        System.out.println(b.buscarxNombre("abb"));
+//        System.out.println(b.buscarxNombre("abb"));
         
         
     }
