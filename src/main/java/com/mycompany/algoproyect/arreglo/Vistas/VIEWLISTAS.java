@@ -262,13 +262,8 @@ public class VIEWLISTAS extends javax.swing.JFrame {
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         int codigo = Integer.parseInt(txtCodigo.getText());
 
-        if (lista.eliminaNodoxFinal(codigo)) {
-            JOptionPane.showMessageDialog(this, "Producto eliminado");
-            mostrarTabla();
-            limpiarCampos();
-        } else {
-            JOptionPane.showMessageDialog(this, "Código no encontrado");
-        }
+        lista.eliminaNodoxFinal(codigo); // no retorna nada
+        JOptionPane.showMessageDialog(this, "Producto Eliminado");
         mostrarTabla(); // actualiza la tabla
     }//GEN-LAST:event_btnEliminarActionPerformed
 

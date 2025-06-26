@@ -30,26 +30,57 @@ public class LES {
     }
      
      //sin boolean
-     public boolean eliminaNodoxFinal(int codigo){
-        if (inicio == null) return false;
+//     public boolean eliminaNodoxFinal(int codigo){
+//        if (inicio == null) return false;
+//        if (inicio.getDato().getCodpro() == codigo) {
+//            inicio = inicio.getSgte();
+//            return true;
+//        } else {
+//            p = inicio;
+//            while (p.getSgte() != null) {
+//                if (p.getSgte().getDato().getCodpro() == codigo) {
+//                    p.setSgte(p.getSgte().getSgte());
+//                    return true;
+//                }
+//                p = p.getSgte();
+//            }
+//        }
+//        return false;
+//    }
+     
+    public void eliminaNodoxFinal(int codigo) {
+    if (inicio != null) {
         if (inicio.getDato().getCodpro() == codigo) {
-            inicio = inicio.getSgte();
-            return true;
+            inicio = inicio.getSgte();        
         } else {
-            p = inicio;
-            while (p.getSgte() != null) {
-                if (p.getSgte().getDato().getCodpro() == codigo) {
-                    p.setSgte(p.getSgte().getSgte());
-                    return true;
-                }
+            p = inicio;                
+            while (p.getSgte() != null && p.getSgte().getDato().getCodpro() != codigo) {
                 p = p.getSgte();
             }
+            if (p.getSgte() != null) {
+                p.setSgte(p.getSgte().getSgte());
+            }
         }
-        return false;
     }
-     
-     
-     public cProducto buscarProducto(int codigo) {
+    }
+        //EJEMPLO DE CLASE
+//     public void eliminaNodoxFinal(){
+//        if (inicio != null){
+//            if(inicio.getSgte()== null)
+//                inicio = null;
+//            else{
+//                p = inicio;
+//                q = inicio;
+//                while(p.getSgte() != null){
+//                    q = p;
+//                    p = p.getSgte();
+//                }
+//                q.setSgte(null);
+//            }
+//
+//        }
+//    }
+    public cProducto buscarProducto(int codigo) {
         p = inicio;
         while (p != null) {
             if (p.getDato().getCodpro() == codigo) {
