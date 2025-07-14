@@ -1,7 +1,7 @@
 
 package arbol;
 
-import com.mycompany.algoproyect.arreglo.Arreglos.cProducto;
+import Arreglos.cProducto;
 
 public class cABB {
     private cNodoabb raiz, nuevo, p;

@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.algoproyect.arreglo.Vistas;
+package GUI;
 
-import com.mycompany.algoproyect.arreglo.LES.LES;
-import com.mycompany.algoproyect.arreglo.Vistas.VIEW;
-import com.mycompany.algoproyect.arreglo.LES.cNodo;
-import com.mycompany.algoproyect.arreglo.Arreglos.cProducto;
+import LES.LES;
+import GUI.VIEW;
+import LES.cNodo;
+import Arreglos.cProducto;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 

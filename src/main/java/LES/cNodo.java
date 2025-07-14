@@ -1,6 +1,6 @@
-package com.mycompany.algoproyect.arreglo.LES;
+package LES;
 
-import com.mycompany.algoproyect.arreglo.Arreglos.cProducto;
+import Arreglos.cProducto;
 
 public class cNodo {
     private cProducto dato;
