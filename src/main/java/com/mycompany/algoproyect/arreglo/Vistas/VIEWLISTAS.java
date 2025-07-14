@@ -22,6 +22,35 @@ public class VIEWLISTAS extends javax.swing.JFrame {
      */
     public VIEWLISTAS() {
         initComponents();
+        // Pre-cargar productos
+    lista.insertaNodoxFinal(new cProducto(101, "Pan", 1.20, 3));
+    lista.insertaNodoxFinal(new cProducto(102, "Leche", 2.50, 2));
+    lista.insertaNodoxFinal(new cProducto(103, "Queso", 4.00, 1));
+
+    cargarTabla();
+    }
+    
+    private void cargarTabla(){
+    DefaultTableModel modelo = (DefaultTableModel) tblProductos.getModel();
+    modelo.setRowCount(0); // Borra filas anteriores
+
+    cNodo actual = lista.getInicio(); // obtener inicio de la lista
+
+    while (actual != null) {
+        cProducto p = actual.getDato();
+        double importe = p.getUnipre() * p.getCantcomp();
+
+        Object[] fila = {
+            p.getCodpro(),
+            p.getNombre(),
+            p.getUnipre(),
+            p.getCantcomp(),
+            importe
+        };
+
+        modelo.addRow(fila);
+        actual = actual.getSgte();
+    }
     }
 
     LES lista = new LES();
@@ -92,6 +121,7 @@ public class VIEWLISTAS extends javax.swing.JFrame {
 
         tblProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
