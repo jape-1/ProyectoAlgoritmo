@@ -1,0 +1,69 @@
+
+package arbol;
+
+import com.mycompany.algoproyect.arreglo.Arreglos.cProducto;
+
+public class cABB {
+    private cNodoabb raiz, nuevo, p;
+
+    public cABB() {
+        raiz = null;
+    }
+
+    public void ingresarProducto(cProducto prod) {
+        nuevo = new cNodoabb(prod);
+        if (raiz == null) {
+            raiz = nuevo;
+        } else {
+            p = raiz;
+            insertaNodo(p);
+        }
+    }
+
+    private void insertaNodo(cNodoabb p) {
+        if (nuevo.getProducto().getCodpro() > p.getProducto().getCodpro()) {
+            if (p.getDer() == null) {
+                p.setDer(nuevo);
+            } else {
+                insertaNodo(p.getDer());
+            }
+        } else {
+            if (p.getIzq() == null) {
+                p.setIzq(nuevo);
+            } else {
+                insertaNodo(p.getIzq());
+            }
+        }
+    }
+
+    public String muestraProductos(int tipo) {
+        p = raiz;
+        if (tipo == 1)
+            return preOrden(p);
+        if (tipo == 2)
+            return inOrden(p);
+        return "";
+    }
+
+    private String preOrden(cNodoabb p) {
+        String cadena = "";
+        if (p != null) {
+            cadena += p.getProducto().toString() + "\n";
+            cadena += preOrden(p.getIzq());
+            cadena += preOrden(p.getDer());
+        }
+        return cadena;
+    }
+
+    private String inOrden(cNodoabb p) {
+        String cadena = "";
+        if (p != null) {
+            cadena += inOrden(p.getIzq());
+            cadena += p.getProducto().toString() + "\n";
+            cadena += inOrden(p.getDer());
+        }
+        return cadena;
+    }
+    
+    
+}

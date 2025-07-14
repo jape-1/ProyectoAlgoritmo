@@ -55,6 +55,12 @@ public class VIEW5 extends javax.swing.JFrame {
 
         jLabel4.setText("CANTIDAD");
 
+        txtCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCodigoActionPerformed(evt);
+            }
+        });
+
         cbxProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -148,6 +154,10 @@ public class VIEW5 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
 
     /**
      * @param args the command line arguments

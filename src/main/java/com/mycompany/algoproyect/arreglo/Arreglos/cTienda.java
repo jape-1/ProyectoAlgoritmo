@@ -59,11 +59,13 @@ public class cTienda {
 //        }
 //    }
     public boolean agregar(cProducto producto){
+        boolean ret = false;
         if (ultInd <indMax){
             ultInd++;
             arreglo_productos[ultInd] = producto;
-            return true;
-        } else return false;     
+            ret = true;
+        }    
+        return ret;
     }
     
     public String mostrar(){
@@ -73,12 +75,13 @@ public class cTienda {
     
     //La salida tiene ser logica
     public cProducto buscarxCod(int codigo){
+        cProducto produc = null;
         for(int i = 0; i <= ultInd; i++){
             if(arreglo_productos[i] != null && arreglo_productos[i].getCodpro() == codigo){
-                return arreglo_productos[i];
+                produc = arreglo_productos[i];
             }
         }
-        return null;
+        return produc;
     }
     
 //    public cProducto buscarxNombre(String nombre){
@@ -96,6 +99,7 @@ public class cTienda {
     
 //  
     public boolean eliminarProd(int codigo) {
+        boolean ret = false;
         for (int i = 0; i <= ultInd; i++) {
             if (arreglo_productos[i] != null && arreglo_productos[i].getCodpro() == codigo) {
                 for (int j = i; j < ultInd; j++) {
@@ -103,22 +107,23 @@ public class cTienda {
                 }
                 arreglo_productos[ultInd] = null; 
                 ultInd--; 
-                return true; 
+                ret = true; 
             }
         }
-        return false; 
+        return ret; 
     }
     
     public boolean actualizar(int codigo, String nuevoNombre, double nuevoPrecio, int nuevaCantidad) {
+        boolean ret = false;
         for (int i = 0; i <= ultInd; i++) {
             if (arreglo_productos[i] != null && arreglo_productos[i].getCodpro() == codigo) {
                 arreglo_productos[i].setNombre(nuevoNombre);
                 arreglo_productos[i].setUnipre(nuevoPrecio);
                 arreglo_productos[i].setCantcomp(nuevaCantidad);
-                return true; 
+                ret = true; 
             }
         }
-        return false; 
+        return ret; 
     }
 
 
