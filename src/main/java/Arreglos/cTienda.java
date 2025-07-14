@@ -5,7 +5,7 @@
 package Arreglos;
 
 import Arreglos.cProducto;
-import java.util.Arrays;
+
 
 /**
  *
@@ -68,10 +68,6 @@ public class cTienda {
         return ret;
     }
     
-    public String mostrar(){
-        String msg = Arrays.toString(arreglo_productos);
-        return msg;
-    }
     
     //La salida tiene ser logica
     public cProducto buscarxCod(int codigo){
