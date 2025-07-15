@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Omega
  */
 public class VIEWCOLAS extends javax.swing.JFrame {
-Cola colaproductos;
+    Cola colaproductos;
 
 private DefaultTableModel dtm;
     /**

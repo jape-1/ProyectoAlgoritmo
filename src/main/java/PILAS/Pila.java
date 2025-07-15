@@ -42,23 +42,23 @@ public class Pila {
         return valor;
     }
 
-    public cProducto accesar() {
-        cProducto valor = null;
-        if (tope >= 0) {
-            valor = pila[tope];
-        }
-        return valor;
-    }
+//    public cProducto accesar() {
+//        cProducto valor = null;
+//        if (tope >= 0) {
+//            valor = pila[tope];
+//        }
+//        return valor;
+//    }
 
-    public String muestraArreglo() {
-        String cadena = "";
-        if (tope >= 0) {
-            for (int i = 0; i <= tope; i++) {
-                cadena += pila[i] + " - ";
-            }
-        }
-        return cadena;
-    }
+//    public String muestraArreglo() {
+//        String cadena = "";
+//        if (tope >= 0) {
+//            for (int i = 0; i <= tope; i++) {
+//                cadena += pila[i] + " - ";
+//            }
+//        }
+//        return cadena;
+//    }
 
     public void mostrarEnTabla(JTable tabla) {
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();

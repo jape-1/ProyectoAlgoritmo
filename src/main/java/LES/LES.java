@@ -46,23 +46,26 @@ public class LES {
     }
     }
     public cProducto buscarProducto(int codigo) {
+        
+        cProducto bp = null;
         p = inicio;
         while (p != null) {
             if (p.getDato().getCodpro() == codigo) {
-                return p.getDato();
+                bp =  p.getDato();
             }
             p = p.getSgte();
         }
-        return null;
+        return bp;
     }
      public boolean actualizarProducto(int codigo, double nuevoPrecio, int nuevaCantidad) {
+        boolean ret = false;
         cProducto prod = buscarProducto(codigo);
         if (prod != null) {
             prod.setUnipre(nuevoPrecio);
             prod.setCantcomp(nuevaCantidad);
-            return true;
+            ret = true;
         }
-        return false;
+        return ret;
     }
      public String recorreLE(){
         String cadena="Lista Vacia";

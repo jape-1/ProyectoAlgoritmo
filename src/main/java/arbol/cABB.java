@@ -68,14 +68,14 @@ public class cABB {
     
 //  
     
-    // Este método es para cuando presionas el botón "Mostrar PreOrden"
+    
     public void llenarTiendaPreOrden(cTienda tienda) {
-        // Reiniciamos la tienda para evitar duplicados si el botón se presiona varias veces
+        
         tienda.setUltInd(-1);
         llenarPreOrden(raiz, tienda);
     }
 
-    // Este método es para cuando presionas el botón "Mostrar InOrden"
+
     public void llenarTiendaInOrden(cTienda tienda) {
         tienda.setUltInd(-1);
         llenarInOrden(raiz, tienda);
