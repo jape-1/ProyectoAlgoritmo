@@ -21,6 +21,7 @@ public class VIEWARBOL extends javax.swing.JFrame {
      */
     public VIEWARBOL() {
         initComponents();
+        precargarProductos();
     }
     cABB arbol = new cABB(); // tu árbol binario
     cTienda oTienda = new cTienda(100); // tienda como arreglo de productos
@@ -30,20 +31,27 @@ public class VIEWARBOL extends javax.swing.JFrame {
     DefaultTableModel modelo = (DefaultTableModel) tblProductos.getModel();
     modelo.setRowCount(0); // Limpia la tabla
 
-    for (int i = 0; i <= oTienda.getUltInd(); i++) {
-        cProducto prod = oTienda.getArreglo_productos()[i];
-        if (prod != null) {
-            int cod = prod.getCodpro();
-            String nom = prod.getNombre();
-            double pre = prod.getUnipre();
-            int cant = prod.getCantcomp();
-            double imp = pre * cant;
+        for (int i = 0; i <= oTienda.getUltInd(); i++) {
+            cProducto prod = oTienda.getArreglo_productos()[i];
+            if (prod != null) {
+                int cod = prod.getCodpro();
+                String nom = prod.getNombre();
+                double pre = prod.getUnipre();
+                int cant = prod.getCantcomp();
+                double imp = pre * cant;
 
-            Object[] fila = { cod, nom, pre, cant, imp };
-            modelo.addRow(fila);
+                Object[] fila = { cod, nom, pre, cant, imp };
+                modelo.addRow(fila);
+            }
         }
     }
-}
+    private void precargarProductos() {
+        arbol.ingresarProducto(new cProducto(5, "Miel", 12.5, 2));
+        arbol.ingresarProducto(new cProducto(2, "Polen", 9.8, 3));
+        arbol.ingresarProducto(new cProducto(8, "Propóleo", 15.0, 1));
+        arbol.ingresarProducto(new cProducto(1, "Cera", 5.5, 6));
+        arbol.ingresarProducto(new cProducto(4, "Jalea Real", 18.9, 2));
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -213,7 +221,14 @@ public class VIEWARBOL extends javax.swing.JFrame {
     }//GEN-LAST:event_btnvolvermenuActionPerformed
 
     private void btntotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntotalActionPerformed
-         
+        double total = 0;
+        for (int i = 0; i <= oTienda.getUltInd(); i++) {
+            cProducto p = oTienda.getArreglo_productos()[i];
+            if (p != null) {
+                total += p.getUnipre() * p.getCantcomp();
+            }
+        }
+        txtTotal.setText(String.format("%.2f", total));
     }//GEN-LAST:event_btntotalActionPerformed
 
     private void btninordenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninordenActionPerformed

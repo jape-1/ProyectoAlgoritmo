@@ -90,13 +90,13 @@ public class Pila {
     public int getTope() { //obtener tope
         return tope;
     }
-
-    public cProducto getElemento(int i) { 
-        if (i >= 0 && i <= tope) {
-            return pila[i];
-        }
-        return null;
-    }
+        //comment
+//    public cProducto getElemento(int i) { 
+//        if (i >= 0 && i <= tope) {
+//            return pila[i];
+//        }
+//        return null;
+//    }
     
     public int getCapacidad() {
     return pila.length;

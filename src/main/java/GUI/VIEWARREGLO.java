@@ -20,9 +20,18 @@ public class VIEWARREGLO extends javax.swing.JFrame {
      */
     public VIEWARREGLO() {
         initComponents();
+        precargarDatos();
+        mostrarTabla();
     }
     cTienda oTienda  = new cTienda(20);
     
+    private void precargarDatos() {
+        oTienda.agregar(new cProducto(1001, "Miel", 12.5, 2));
+        oTienda.agregar(new cProducto(1002, "Polen", 9.8, 3));
+        oTienda.agregar(new cProducto(1003, "Jalea Real", 15.0, 1));
+        oTienda.agregar(new cProducto(1004, "Propóleo", 18.5, 4));
+        oTienda.agregar(new cProducto(1005, "Cera de abeja", 6.0, 5));
+    }
     private void mostrarTabla() {
         DefaultTableModel modelo = (DefaultTableModel) tblProductos.getModel();
         modelo.setRowCount(0);
